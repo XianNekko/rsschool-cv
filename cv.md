@@ -42,9 +42,10 @@ At the moment I have no commercial experience, but I am actively developing thro
 
 1. **Moscow Financial and Industrial University "Synergy"**
    - **Faculty:** Information Systems and Technologies
-   - **Years of study:** 2021 - 2026
+   - **Years of study:** 2021 - currently
 2. **RSSchool**
    - **Course:** Front-end(Pre-School)
+   - **Years of study:** currently
 
 ## Languages
 
