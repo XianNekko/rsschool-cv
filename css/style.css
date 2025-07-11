@@ -1,0 +1,148 @@
+:root {
+  --color-accent: #b9ff66;
+  --color-light: #ffffff;
+  --color-dark: #404553;
+  --color-dark-alt: #393e4d;
+  --color-gray: #f5f6f7;
+
+  --base-font-family: "Space Grotesk", sans-serif;
+
+  --border: 1px solid var(--color-dark-alt);
+  --border-radius: 10px;
+
+  --container-width: 1200px;
+  --container-padding: 40px;
+
+  --section-padding-y: 20px;
+
+  --transition-duration: 0.3s;
+}
+
+/* Normalize */
+html {
+  scroll-behavior: smooth;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+/* Typography */
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("../assets/fonts/space-grotesk-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("../assets/fonts/space-grotesk-500.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  color: var(--color-dark-alt);
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+/* Base */
+
+body {
+  font-family: var(--base-font-family);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.28;
+  color: var(--color-dark);
+  background-color: var(--color-gray);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.container {
+  max-width: calc(var(--container-width) + var(--container-padding) * 2);
+  padding: var(--container-padding);
+  margin: 0 auto;
+}
+
+header,
+footer,
+section {
+  background-color: var(--color-light);
+  border-radius: var(--border-radius);
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80px;
+}
+
+.menu__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.menu__link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 48px;
+  transition-duration: var(--transition-duration);
+}
+
+.menu__link::after {
+  content: "";
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  translate: -50%;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition-duration: var(--transition-duration);
+}
+
+/* Media */
+@media (hover: hover) {
+  .menu__link:hover::after {
+    width: 100%;
+  }
+}
+
+@media (hover: none) {
+  .menu__link:active {
+    color: var(--color-accent);
+  }
+}
