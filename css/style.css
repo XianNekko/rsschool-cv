@@ -112,7 +112,6 @@ section {
 }
 
 section {
-  margin: var(--section-margin-y) 0;
   padding: var(--section-padding-y) var(--section-padding-x);
 }
 
@@ -131,6 +130,13 @@ section {
   padding: 5px 10px;
   background-color: var(--color-accent);
   border-radius: var(--border-radius);
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 31px 0;
 }
 
 /* Header */
@@ -170,6 +176,7 @@ section {
 
 /* About */
 .about {
+  grid-column: 1 / -1;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -204,6 +211,49 @@ section {
   margin-bottom: 15px;
 }
 
+/* Contacts */
+.contacts__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  column-gap: 5px;
+}
+
+.contacts__item::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  translate: 0 -50%;
+  width: 0;
+  height: 50%;
+  background-color: var(--color-accent);
+  border-radius: var(--border-radius);
+  transition-duration: var(--transition-duration);
+}
+
+.contacts__item svg {
+  width: 20px;
+  height: 20px;
+}
+
+.contacts__item svg,
+.contacts__text {
+  position: relative;
+  z-index: 10;
+}
+
+.contacts__link,
+.contacts__text span {
+  position: relative;
+  z-index: 10;
+}
+
+.contacts__link {
+  text-decoration: underline;
+}
+
 /* Media */
 @media (hover: hover) {
   .menu__link:hover::after {
@@ -212,6 +262,10 @@ section {
 
   .button:hover {
     background-color: var(--color-accent);
+  }
+
+  .contacts__item:has(.contacts__link:hover)::after {
+    width: 70%;
   }
 }
 
