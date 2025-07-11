@@ -198,6 +198,11 @@ section {
   object-position: center;
 }
 
+/* Experience */
+.experience {
+  grid-row: 2 / 6;
+}
+
 .experience__item:not(:last-child) {
   border-bottom: var(--border);
 }
@@ -252,6 +257,61 @@ section {
 
 .contacts__link {
   text-decoration: underline;
+}
+
+/* Skills */
+
+.skills__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.skills__list {
+  padding: 0 10px 0 0;
+}
+
+.skills__list:not(:last-child) {
+  border-right: var(--border);
+}
+
+.skills__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+.skills__item {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.skills__item-title {
+  margin: 0;
+}
+
+.skills__progress-bar-container {
+  width: 100%;
+  max-width: 60px;
+  height: 9px;
+  border: var(--border);
+  border-radius: var(--border-radius);
+}
+
+.skills__progress-bar {
+  width: 80%;
+  height: 100%;
+  background-color: var(--color-accent);
+  border-radius: var(--border-radius);
+}
+
+.skills__item:nth-child(4) .skills__progress-bar {
+  width: 20%;
+}
+
+.skills__text {
+  margin: 0;
 }
 
 /* Media */
