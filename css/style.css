@@ -170,7 +170,7 @@ section {
   translate: -50%;
   width: 0;
   height: 2px;
-  background-color: currentColor;
+  background-color: var(--color-accent);
   transition-duration: var(--transition-duration);
 }
 
@@ -312,6 +312,32 @@ section {
 
 .skills__text {
   margin: 0;
+}
+
+/* Education */
+
+.education__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 20px;
+}
+
+.education__item:not(:last-child) {
+  border-bottom: var(--border);
+}
+
+.education__item-title {
+  margin: 15px 0;
+}
+
+.education__place {
+  margin: 0 0 10px 0;
+}
+
+.education__time {
+  margin: 0 0 20px 0;
+  opacity: 0.5;
 }
 
 /* Media */
